@@ -1,5 +1,4 @@
 import { FeedbackOptions } from './FeedbackOptions';
-import { Notification } from './Notification';
 import { Section } from './Section';
 import { Statistics } from './Statistics';
 import { Component } from 'react';
@@ -10,27 +9,16 @@ export class App extends Component {
     neutral: 0,
     bad: 0,
   };
-  clickGoodBtn = (options) => {
-    this.setState(prevState => {
-      return { good: (prevState.good += 1) };
-    });
-  this.setState(prevState => {
-      return { neutral: (prevState.neutral += 1) };
-  });
-      this.setState(prevState => {
-      return { bad: (prevState.bad += 1) };
-    });
-  };
-  // clickNeutralBtn() {
-  //   this.setState(prevState => {
+  clickGoodBtn = (e) => {
+   return this.setState({[e]: this.state[e] +1});
+  // this.setState(prevState => {
   //     return { neutral: (prevState.neutral += 1) };
-  //   });
-  //  }
-  // clickBadBtn() { 
+  // });
   //     this.setState(prevState => {
   //     return { bad: (prevState.bad += 1) };
   //   });
-  // }
+  };
+
   
   countTotalFeedback({ good, neutral, bad }) {
     return good+neutral+bad
