@@ -19,8 +19,3 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   );
 };
 
-{
-  /* <li className={css.item}><button className={css.btn} type="button"  >Good</button></li>
-      <li className={css.item}><button className={css.btn} type="button" >Neutral</button></li>
-      <li className={css.item}><button className={css.btn} type="button" >Bad</button></li> */
-}
